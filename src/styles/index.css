@@ -1,0 +1,27 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import "tailwindcss";
+
+/* the root styles */
+:root {
+  --satoshi-fonts: "Satoshi", sans-serif;
+  --Base-color: #002f6c;
+  --navigation-text: #d0d5dd;
+  --Header-color: #101828;
+  --bg-header-main: #dee6e2;
+  --neutral-dashboard-color: #f8fbff;
+  --table-text-color: #475467;
+}
+
+/* the body styles */
+* {
+  /* margin: 0px;
+  padding: 0px; */
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+/* the main body styles */
+body {
+  font-family: var(--satoshi-fonts);
+}
+/* the general css styles for the main website */
