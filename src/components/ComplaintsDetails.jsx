@@ -5,7 +5,7 @@ const ComplaintsDetails = () => {
   return (
     <section className="bg-[#F8FBFF]">
       <CardHeader />
-      <div className="px-6">
+      <div className="px-4 sm:px-6">
         <Details />
         <DetailForm />
       </div>
