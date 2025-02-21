@@ -7,7 +7,7 @@ import UploadImage from "../Img/upload-cloud-02.png";
 
 const LogComplaints = ({ isOpen, setIsOpen }) => {
   return (
-    <section className="text-[#475467] modal bg-[white] p-4 rounded-md w-[400px]">
+    <section className="text-[#475467] modal bg-[white] p-6 sm:p-4 rounded-md w-[400px]">
       <ComplaintsHeader isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );
