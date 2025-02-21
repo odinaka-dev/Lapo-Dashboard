@@ -30,12 +30,12 @@ const Details = () => {
 
 const DetailForm = () => {
   return (
-    <section className="bg-[#FFFFFF] border border-[#E2E2E2] p-4 pb-24 rounded-md mt-4">
+    <section className="bg-[#FFFFFF] border border-[#E2E2E2] p-4 pb-24 rounded-md mt-4 mb-4 sm:mb-0">
       <h1 className="text-[18px] text-[#101828] font-medium">
         Complaint Details
       </h1>
       <form action="" className="mt-4 text-[#101828]">
-        <div className="grid grid-cols-2 gap-16 w-full my-4 mt-8">
+        <div className="grid sm:grid-cols-2 sm:gap-16 w-full my-4 mt-8">
           <div className="category flex flex-col items-start mb-4">
             <label
               htmlFor=""
@@ -60,7 +60,7 @@ const DetailForm = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-16 w-full my-4">
+        <div className="grid sm:grid-cols-2 sm:gap-16 w-full my-4">
           <div className="category flex flex-col items-start mb-4">
             <label
               htmlFor=""
