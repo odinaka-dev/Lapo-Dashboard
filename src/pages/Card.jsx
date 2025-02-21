@@ -22,7 +22,7 @@ const CardComponent = () => {
           />
         </div>
         {isOpen && (
-          <div className="fixed top-0 left-0 h-[100%] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
+          <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
             <section className="">
               <LogComplaint isOpen={isOpen} setIsOpen={setIsOpen} />
             </section>
