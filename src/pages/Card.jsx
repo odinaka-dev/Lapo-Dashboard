@@ -14,7 +14,7 @@ const CardComponent = () => {
     <React.Fragment>
       <section className="text-[14px] bg-[#F8FBFF]">
         <CardHeader />
-        <div className="px-6">
+        <div className="px-2 sm:px-6">
           <FirstComponent isOpen={isOpen} setIsOpen={setIsOpen} />
           <CardTableData
             filterOpen={filterOpen}

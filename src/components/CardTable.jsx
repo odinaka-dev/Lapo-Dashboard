@@ -5,7 +5,7 @@ import Filter from "../Img/filter-lines.png";
 
 const CardTableData = ({ setFiterOpen }) => {
   return (
-    <section className=" mb-8">
+    <section className="mb-8">
       <CardDisplayComponent setFiterOpen={setFiterOpen} />
       <ComplaintsTable />
     </section>
@@ -17,13 +17,13 @@ const CardTableData = ({ setFiterOpen }) => {
 const CardDisplayComponent = ({ setFiterOpen }) => {
   return (
     <section className="component bg-[#F9FAFB] p-2 border-[1px] border-[#DEE6E2] rounded-t-[5px]">
-      <div className="display flex justify-between items-center">
+      <div className="display flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
         <form action="">
           <div className="search_inp bg-white border-[1px] border-[#DEE6E2] flex gap-2 items-center text-[14px] p-2 px-4 rounded-sm">
             <IoIosSearch className="text-[#667085] text-[18px]" />
             <input
               type="search"
-              className="bg-none border-none w-full lg:w-[300px] outline-none text-[#667085] capitalize"
+              className="bg-none border-none w-full sm:w-[300px] outline-none text-[#667085] capitalize"
               placeholder="Search complaint"
             />
           </div>
@@ -181,7 +181,7 @@ const ComplaintsTable = () => {
   return (
     <div className="w-[100%] bg-white">
       <div className="">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+        <table className="overflow-x-auto min-w-full bg-white border border-gray-200 rounded-lg">
           <thead>
             <tr className="bg-gray-100 border-b border-b-[#EAECF0]">
               <th className="py-3 px-4 text-left text-[#475467] font-normal border-r border-r-[#EAECF0]">

@@ -7,7 +7,7 @@ import FooterImg from "../assets/Vector.png";
 
 const Header = () => {
   return (
-    <section className="bg-[#002f6c] text-[#d0d5dd] h-[100%] text-[14px]">
+    <section className="hidden z-[9999] lg:block bg-[#002f6c] text-[#d0d5dd] lg:h-[100%] text-[14px]">
       <div className="m-6 mr-2">
         <Logo />
         <DashBoardMenu />
