@@ -10,12 +10,11 @@
   --bg-header-main: #dee6e2;
   --neutral-dashboard-color: #f8fbff;
   --table-text-color: #475467;
+  --background-blur: #000000a4;
 }
 
 /* the body styles */
 * {
-  /* margin: 0px;
-  padding: 0px; */
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;

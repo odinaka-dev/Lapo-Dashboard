@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogooImage from "../Img/LAPO_Logo_2022-removebg-preview 1.png";
 import IconImage from "../assets/building-06.png";
+import Logout from "../assets/logout-02.png";
+import FooterImg from "../assets/Vector.png";
 
 const Header = () => {
   return (
@@ -16,9 +18,9 @@ const Header = () => {
 
 const Logo = () => {
   return (
-    <section className="Logo mb-6">
+    <section className="Logo py-4 mb-12">
       <div className="">
-        <img src={LogooImage} alt="" />
+        <img src={LogooImage} alt="" className="" />
       </div>
     </section>
   );
@@ -63,7 +65,7 @@ const DashBoardMenu = () => {
       menuIcon: IconImage,
     },
     {
-      menuName: "generate / Reissue Pin",
+      menuName: "Generate/Reissue Pin",
       menuIcon: IconImage,
     },
     {
@@ -100,17 +102,19 @@ const DashBoardMenu = () => {
   ];
 
   return (
-    <section className="dashboard_links text-[12px]">
+    <section className="dashboard_links text-[14px]">
       <div className="Dashboard">
         <ul className="flex gap-4 items-center">
           <li className="rounded-lg p-2">Dashboard</li>
         </ul>
       </div>
       <div className="sub_links">
-        <p className="p-2 my-2">Main Menu</p>
+        <p className="p-2 my-2 text-[#7E8B9C] text-[10px] uppercase">
+          Main Menu
+        </p>
         {menu.map(({ menuName, menuIcon }) => (
           <ul className="font-thin capitalize">
-            <li className="main_menu p-2  mb-2 rounded-lg px-2 hover:bg-white hover:text-cursor hover:text-[#002f6c] cursor-pointer  duration-300">
+            <li className="main_menu p-2  mb-4 rounded-lg px-2 hover:bg-white hover:text-cursor hover:text-[#002f6c] cursor-pointer  duration-300">
               <div className="flex gap-2 items-center">
                 <p>
                   <img src={`${menuIcon}`} alt="" />
@@ -120,6 +124,28 @@ const DashBoardMenu = () => {
             </li>
           </ul>
         ))}
+      </div>
+      <div className="footer_nav my-8">
+        <div className="flex">
+          <ul className="font-thin capitalize">
+            <li className="main_menu p-2  mb-4 rounded-lg px-2 hover:bg-white hover:text-cursor hover:text-[#002f6c] cursor-pointer  duration-300">
+              <div className="flex gap-2 items-center">
+                <p>
+                  <img src={Logout} alt="" />
+                </p>
+                <p>Logout</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="">
+          <p className="p-2 my-2 text-[#7E8B9C] text-[10px] uppercase">
+            Powered by
+          </p>
+          <div>
+            <img src={FooterImg} alt="" className="w-[60%]" />
+          </div>
+        </div>
       </div>
     </section>
   );
