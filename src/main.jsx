@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Card from "./pages/Card.jsx";
 import Layout from "./components/Layout.jsx";
+import ComplaintsDetails from "./components/ComplaintsDetails.jsx";
 
 // React Router
 const route = createBrowserRouter([
@@ -10,7 +11,10 @@ const route = createBrowserRouter([
     path: "/",
     element: <Layout />,
     errorElement: <Error />,
-    children: [{ index: true, element: <Card /> }],
+    children: [
+      { index: true, element: <Card /> },
+      { path: "/complaint-details/:id", element: <ComplaintsDetails /> },
+    ],
   },
 ]);
 

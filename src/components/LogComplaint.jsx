@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import FileImage from "../Img/file-plus-02.png";
 import Cancel from "../Img/x-close.png";
 import { useDropzone } from "react-dropzone";
@@ -13,6 +14,8 @@ const LogComplaints = ({ isOpen, setIsOpen }) => {
 };
 
 const ComplaintsHeader = ({ isOpen, setIsOpen }) => {
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <div className="modal_header flex justify-between items-center mb-4">
@@ -36,13 +39,13 @@ const ComplaintsHeader = ({ isOpen, setIsOpen }) => {
         </div>
       </div>
       <div className="">
-        <LogForm />
+        <LogForm navigate={navigate} />
       </div>
     </React.Fragment>
   );
 };
 
-const LogForm = () => {
+const LogForm = ({ navigate }) => {
   return (
     <React.Fragment>
       <form action="" className="">
@@ -106,7 +109,10 @@ const LogForm = () => {
         </div>
         {/* Button */}
         <div className="Proceed">
-          <button className="block w-full bg-[#014DAF] text-[#FFFFFF] p-2 rounded-sm cursor-pointer">
+          <button
+            onClick={() => navigate("/complaint-details/:id")}
+            className="block w-full bg-[#014DAF] text-[#FFFFFF] p-2 rounded-sm cursor-pointer"
+          >
             Proceed
           </button>
         </div>

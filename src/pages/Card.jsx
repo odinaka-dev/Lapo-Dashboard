@@ -4,9 +4,11 @@ import { GoDotFill } from "react-icons/go";
 import CardHeader from "../components/CardHeader";
 import CardTableData from "../components/CardTable";
 import LogComplaint from "../components/LogComplaint";
+import FilterComponent from "../components/Filter";
 
 const CardComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   return (
     <React.Fragment>
@@ -14,15 +16,30 @@ const CardComponent = () => {
         <CardHeader />
         <div className="px-6">
           <FirstComponent isOpen={isOpen} setIsOpen={setIsOpen} />
-          <CardTableData />
+          <CardTableData
+            filterOpen={filterOpen}
+            setFilterOpen={setFilterOpen}
+          />
         </div>
         {isOpen && (
-          <div className="fixed top-0 left-0 h-[100vh] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
+          <div className="fixed top-0 left-0 h-[100%] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
             <section className="">
               <LogComplaint isOpen={isOpen} setIsOpen={setIsOpen} />
             </section>
           </div>
         )}
+        <div>
+          {filterOpen && (
+            <div className="fixed top-0 left-0 h-[100%] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
+              <section className="">
+                <FilterComponent
+                  filterOpen={filterOpen}
+                  setFilterOpen={setFilterOpen}
+                />
+              </section>
+            </div>
+          )}
+        </div>
       </section>
     </React.Fragment>
   );
@@ -32,7 +49,9 @@ const FirstComponent = ({ setIsOpen }) => {
   return (
     <section className="first_component">
       <div className="py-4 border-b border-b-[#DEE6E2] leading-7 mb-2">
-        <h1 className="text-[18px] font-normal">Log Complaint</h1>
+        <h1 className="text-[18px] text-[#101828] font-medium">
+          Log Complaint
+        </h1>
         <p className="text-[#475467] text-[14px]">
           View details of logged complaints and log new ones here.
         </p>

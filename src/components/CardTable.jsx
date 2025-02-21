@@ -3,10 +3,10 @@ import { IoIosSearch } from "react-icons/io";
 import Calender from "../Img/calendar.png";
 import Filter from "../Img/filter-lines.png";
 
-const CardTableData = () => {
+const CardTableData = ({ setFiterOpen }) => {
   return (
     <section className=" mb-8">
-      <CardDisplayComponent />
+      <CardDisplayComponent setFiterOpen={setFiterOpen} />
       <ComplaintsTable />
     </section>
   );
@@ -14,7 +14,7 @@ const CardTableData = () => {
 
 // search functionality
 
-const CardDisplayComponent = () => {
+const CardDisplayComponent = ({ setFiterOpen }) => {
   return (
     <section className="component bg-[#F9FAFB] p-2 border-[1px] border-[#DEE6E2] rounded-t-[5px]">
       <div className="display flex justify-between items-center">
@@ -33,7 +33,10 @@ const CardDisplayComponent = () => {
             <img src={Calender} alt="" />
             <span>Date</span>
           </div>
-          <div className="filter flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer">
+          <div
+            onClick={() => setFiterOpen(true)}
+            className="filter flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer"
+          >
             <img src={Filter} alt="" />
             <span>Filter</span>
           </div>
@@ -176,8 +179,8 @@ const ComplaintsTable = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto bg-white">
-      <div className="overflow-x-auto">
+    <div className="w-[100%] bg-white">
+      <div className="">
         <table className="min-w-full bg-white border border-gray-200 rounded-lg">
           <thead>
             <tr className="bg-gray-100 border-b border-b-[#EAECF0]">
