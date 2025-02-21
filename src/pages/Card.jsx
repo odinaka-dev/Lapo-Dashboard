@@ -14,7 +14,7 @@ const CardComponent = () => {
     <React.Fragment>
       <section className="text-[14px] bg-[#F8FBFF]">
         <CardHeader />
-        <div className="px-2 sm:px-6">
+        <div className="px-4 sm:px-6">
           <FirstComponent isOpen={isOpen} setIsOpen={setIsOpen} />
           <CardTableData
             filterOpen={filterOpen}
@@ -56,7 +56,7 @@ const FirstComponent = ({ setIsOpen }) => {
           View details of logged complaints and log new ones here.
         </p>
       </div>
-      <div className="sub_component flex justify-between items-center py-2 mb-4">
+      <div className="sub_component flex justify-between items-center gap-2 py-2 mb-4">
         <div className="pendNreview flex items-center">
           <button className="bg-white text-[#344054] flex items-center gap-2 border border-[#DEE6E2] rounded-l-[8px] p-2 px-4 cursor-pointer">
             <GoDotFill className="text-[#014DAF]" />
@@ -72,7 +72,7 @@ const FirstComponent = ({ setIsOpen }) => {
             className="flex gap-2 items-center bg-[#014DAF] p-2 px-6 rounded-sm text-white cursor-pointer"
           >
             <img src={LogOut} alt="" />
-            <span>Log Complaint</span>
+            <span className="hidden sm:block">Log Complaint</span>
           </button>
         </div>
       </div>

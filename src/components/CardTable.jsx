@@ -17,7 +17,7 @@ const CardTableData = ({ setFiterOpen }) => {
 const CardDisplayComponent = ({ setFiterOpen }) => {
   return (
     <section className="component bg-[#F9FAFB] p-2 border-[1px] border-[#DEE6E2] rounded-t-[5px]">
-      <div className="display flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+      <div className="display flex justify-between items-center gap-2">
         <form action="">
           <div className="search_inp bg-white border-[1px] border-[#DEE6E2] flex gap-2 items-center text-[14px] p-2 px-4 rounded-sm">
             <IoIosSearch className="text-[#667085] text-[18px]" />
@@ -31,14 +31,14 @@ const CardDisplayComponent = ({ setFiterOpen }) => {
         <div className="filter flex gap-2 items-center text-[#344054]">
           <div className="calender flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer">
             <img src={Calender} alt="" />
-            <span>Date</span>
+            <span className="hidden sm:block">Date</span>
           </div>
           <div
             onClick={() => setFiterOpen(true)}
             className="filter flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer"
           >
             <img src={Filter} alt="" />
-            <span>Filter</span>
+            <span className="hidden sm:block">Filter</span>
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@ const ComplaintsTable = () => {
               <th className="py-3 px-4 text-center text-[#475467] font-normal border-r border-r-[#EAECF0]">
                 Submission Date
               </th>
-              <th className="py-3 px-4 text-center text-[#475467] font-normal border-r border-r-[#EAECF0]">
+              <th className="hidden sm:table-cell py-3 px-4 text-center text-[#475467] font-normal border-r border-r-[#EAECF0]">
                 Category
               </th>
             </tr>
@@ -213,7 +213,7 @@ const ComplaintsTable = () => {
                 <td className="text-center py-3 px-4 border-r border-r-[#EAECF0]">
                   {complaint.submissionDate}
                 </td>
-                <td className="text-center py-3 px-4 border-r border-r-[#EAECF0]">
+                <td className="hidden sm:table-cell text-center py-3 px-4 border-r border-r-[#EAECF0]">
                   {complaint.category}
                 </td>
               </tr>
