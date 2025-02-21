@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import Calender from "../Img/calendar.png";
 import Filter from "../Img/filter-lines.png";
@@ -176,7 +176,157 @@ const ComplaintsTable = () => {
       submissionDate: "11/14/2024 10:27:43",
       category: "Card Dispute",
     },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibola",
+      submissionDate: "11/14/2024 10:27:43",
+      category: "Card Dispute",
+    },
+    {
+      accountNumber: "0123456789",
+      customerName: "Nazeer Ajibo",
+      submissionDate: "11/14/2024 10:27:45",
+      category: "Card Dispute",
+    },
   ];
+
+  const itemsPerPage = 20;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // calculating the total pages
+  const totalPages = Math.ceil(ComplaintsData.length / itemsPerPage);
+
+  // get current items
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = ComplaintsData.slice(indexOfFirstItem, indexOfLastItem);
+
+  // toggle effect for the Next and prev buttons
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   return (
     <div className="w-[100%] bg-white">
@@ -199,7 +349,7 @@ const ComplaintsTable = () => {
             </tr>
           </thead>
           <tbody>
-            {ComplaintsData.map((complaint, index) => (
+            {currentItems.map((complaint, index) => (
               <tr
                 key={index}
                 className="border-b border-b-[#EAECF0] text-[#475467] text-[12px] hover:bg-gray-50"
@@ -220,15 +370,23 @@ const ComplaintsTable = () => {
             ))}
           </tbody>
         </table>
-        <div className="border-b border-r border-b-[#EAECF0] border-r-[#EAECF0] w-full pagination text-[#475467] flex justify-between items-center p-2">
+        <div className="border-b border-r border-b-[#EAECF0] border-r-[#EAECF0] border-l border-l-[#EAECF0] w-full pagination text-[#475467] flex justify-between items-center p-2">
           <div className="page_information capitalize">
-            <p className="font-medium">Page 1 of 20</p>
+            <p className="font-medium">{`Page ${currentPage} of 20`}</p>
           </div>
           <div className="pagination_button flex gap-2 items-center">
-            <button className="p-2 border border-[#EAECF0] rounded-sm">
+            <button
+              onClick={handlePrevious}
+              disabled={currentPage === 1}
+              className={`p-2 border border-[#EAECF0] rounded-sm `}
+            >
               Previous
             </button>
-            <button className="p-2 border border-[#EAECF0] rounded-sm">
+            <button
+              onClick={handleNext}
+              disabled={currentPage === totalPages}
+              className="p-2 border border-[#EAECF0] rounded-sm"
+            >
               Next
             </button>
           </div>
