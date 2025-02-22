@@ -162,7 +162,7 @@ const DashBoardMenu = () => {
           {menu.map(({ menuName, menuIcon, id }) => (
             <motion.li
               key={id}
-              className="main_menu p-2 mb-4 rounded-lg px-2 hover:bg-white hover:text-[#002f6c] cursor-pointer duration-300 flex gap-2 items-center"
+              className="main_menu p-2 mb-4 rounded-lg px-2 hover:bg-[#E4F0FF] hover:text-[#002f6c] cursor-pointer duration-300 flex gap-2 items-center"
               variants={menuItemVariants}
               initial="hidden"
               animate="visible"

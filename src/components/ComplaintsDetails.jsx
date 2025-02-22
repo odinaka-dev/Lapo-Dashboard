@@ -43,21 +43,17 @@ const DetailForm = () => {
             >
               Complaint Category
             </label>
-            <input
-              type="text"
-              placeholder="Card Dispute"
-              className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full"
-            />
+            <p className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full">
+              Card Dispute
+            </p>
           </div>
           <div className="category flex flex-col items-start mb-4 text-[14px]">
             <label htmlFor="" className="text-[#344054] font-medium mb-2">
               Branch
             </label>
-            <input
-              type="text"
-              placeholder="Head Office"
-              className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full"
-            />
+            <p className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full">
+              Head Office
+            </p>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 sm:gap-16 w-full my-4">
@@ -68,34 +64,26 @@ const DetailForm = () => {
             >
               Account Number
             </label>
-            <input
-              type="text"
-              placeholder="0123456789"
-              className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full"
-            />
+            <p className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full">
+              0123456789
+            </p>
           </div>
           <div className="category flex flex-col items-start mb-4 text-[14px]">
             <label htmlFor="" className="text-[#344054] font-medium mb-2">
               Customer Name
             </label>
-            <input
-              type="text"
-              placeholder="Nazeer"
-              className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full"
-            />
+            <p className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full">
+              Nazeer
+            </p>
           </div>
         </div>
         <div className="category flex flex-col items-start mb-4">
           <label htmlFor="" className="text-[#344054] font-medium mb-2">
             Complaints Details
           </label>
-          <textarea
-            name=""
-            id=""
-            rows="3"
-            placeholder="Complaints Details..."
-            className="outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full"
-          ></textarea>
+          <p className="h-[100px] outline-none bg-[#F5F5F7] border border-[#D0D5DD] rounded-md p-2 w-full">
+            Complaints Details...
+          </p>
         </div>
       </form>
       <div>
