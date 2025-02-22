@@ -110,7 +110,7 @@ const LogForm = ({ navigate }) => {
         {/* Button */}
         <div className="Proceed">
           <button
-            onClick={() => navigate("/complaint-details/:id")}
+            onClick={() => navigate(`complaint-details`)}
             className="block w-full bg-[#014DAF] text-[#FFFFFF] p-2 rounded-sm cursor-pointer"
           >
             Proceed

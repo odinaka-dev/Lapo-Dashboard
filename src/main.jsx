@@ -13,7 +13,7 @@ const route = createBrowserRouter([
     errorElement: <Error />,
     children: [
       { index: true, element: <Card /> },
-      { path: "/complaint-details/:id", element: <ComplaintsDetails /> },
+      { path: "complaint-details", element: <ComplaintsDetails /> },
     ],
   },
 ]);
