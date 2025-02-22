@@ -20,6 +20,7 @@ import Authorized from "../assets/list.png";
 import Authorized2 from "../assets/layers-three-01.png";
 import Trail from "../assets/map-01.png";
 import Account from "../assets/user.png";
+import { LuFileText } from "react-icons/lu";
 
 const sidebarVariants = {
   hidden: { x: -250, opacity: 0 },
@@ -89,7 +90,7 @@ const DashBoardMenu = () => {
     {
       id: 5,
       menuName: "card profile",
-      menuIcon: Cards2,
+      menuIcon: Cards,
     },
     {
       id: 6,
@@ -119,7 +120,7 @@ const DashBoardMenu = () => {
     {
       id: 11,
       menuName: "Complaints: log",
-      menuIcon: IconImage,
+      menuIcon: Resolve,
     },
     {
       id: 12,
