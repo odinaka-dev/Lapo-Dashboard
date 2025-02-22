@@ -372,7 +372,7 @@ const ComplaintsTable = () => {
         </table>
         <div className="border-b border-r border-b-[#EAECF0] border-r-[#EAECF0] border-l border-l-[#EAECF0] w-full pagination text-[#475467] flex justify-between items-center p-2">
           <div className="page_information capitalize">
-            <p className="font-medium">{`Page ${currentPage} of 20`}</p>
+            <p className="font-medium">{`Page ${currentPage} of ${totalPages}`}</p>
           </div>
           <div className="pagination_button flex gap-2 items-center">
             <button
