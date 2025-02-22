@@ -21,7 +21,6 @@ const route = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <Card /> */}
     <RouterProvider router={route} />
   </StrictMode>
 );

@@ -152,7 +152,7 @@ const DashBoardMenu = () => {
   return (
     <motion.section className="dashboard_links text-[14px]">
       <motion.div className="Dashboard" initial="hidden" animate="visible">
-        <ul className="flex items-center">
+        <ul className="flex items-center hover:bg-[#E4F0FF] hover:text-[#002f6c] cursor-pointer duration-300 rounded-md">
           <img src={DashboardIcon} alt="" />
           <li className="rounded-lg p-2">Dashboard</li>
         </ul>
