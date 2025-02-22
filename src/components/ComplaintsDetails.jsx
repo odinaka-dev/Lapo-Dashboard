@@ -56,7 +56,7 @@ const DetailForm = () => {
             </p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 sm:gap-16 w-full my-4">
+        <div className="grid sm:grid-cols-2 sm:gap-16 w-full my-2 sm:my-4">
           <div className="category flex flex-col items-start mb-4">
             <label
               htmlFor=""
