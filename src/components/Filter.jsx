@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterComponent = () => {
+const FilterComponent = ({ filterOpen, setFilterOpen }) => {
   return (
     <section className="filter_section">
       <h1>Hello world</h1>

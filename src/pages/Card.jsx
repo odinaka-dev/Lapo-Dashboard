@@ -29,16 +29,18 @@ const CardComponent = () => {
           </div>
         )}
         <div>
-          {filterOpen && (
-            <div className="fixed top-0 left-0 h-[100%] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
-              <section className="">
-                <FilterComponent
-                  filterOpen={filterOpen}
-                  setFilterOpen={setFilterOpen}
-                />
-              </section>
-            </div>
-          )}
+          <div>
+            {filterOpen && (
+              <div className="fixed top-0 left-0 h-[100%] w-full flex justify-center items-center bg-[#000000a4] backdrop-blur-[2px]">
+                <section className="">
+                  <FilterComponent
+                    filterOpen={filterOpen}
+                    setFilterOpen={setFilterOpen}
+                  />
+                </section>
+              </div>
+            )}
+          </div>
         </div>
       </section>
     </React.Fragment>

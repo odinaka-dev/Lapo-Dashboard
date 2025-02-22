@@ -3,7 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 import Calender from "../Img/calendar.png";
 import Filter from "../Img/filter-lines.png";
 
-const CardTableData = ({ setFiterOpen }) => {
+const CardTableData = ({ setFiterOpen, filterOpen }) => {
   return (
     <section className="mb-8">
       <CardDisplayComponent setFiterOpen={setFiterOpen} />
@@ -29,17 +29,17 @@ const CardDisplayComponent = ({ setFiterOpen }) => {
           </div>
         </form>
         <div className="filter flex gap-2 items-center text-[#344054]">
-          <div className="calender flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer">
+          <button className="calender flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer">
             <img src={Calender} alt="" />
             <span className="hidden sm:block">Date</span>
-          </div>
-          <div
+          </button>
+          <button
             onClick={() => setFiterOpen(true)}
             className="filter flex items-center gap-2 bg-white p-2 px-4 rounded-[5px] border border-[#DEE6E2] cursor-pointer"
           >
             <img src={Filter} alt="" />
             <span className="hidden sm:block">Filter</span>
-          </div>
+          </button>
         </div>
       </div>
     </section>
